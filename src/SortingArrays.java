@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class SortingArrays {
     /*
@@ -29,14 +30,23 @@ public class SortingArrays {
      */
 
     public static void main(String[] args) {
-        int[] testArray={1, 5, 18, 23, 74, 24};
+       /* int[] testArray={1, 5, 18, 23, 74, 24};
         printArray(testArray);
         int[] test=sortInteger(testArray);
-        System.out.println(Arrays.toString(test));
+        System.out.println(Arrays.toString(test));*/
+        getInteger(5);
+        printArray(getInteger(5));
     }
 
     public static int[] getInteger(int length){
+
+        Scanner scanner1 = new Scanner(System.in);
+        int scannedNumber=scanner1.nextInt();
         int[] scanArray = new int[length];
+    //    System.out.println("Enter " + length + " integer values:\r");
+        for(int i=0; i<length; i++){
+            scanArray[i]=scannedNumber;
+        }
         return scanArray;
     }
 

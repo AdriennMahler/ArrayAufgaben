@@ -90,6 +90,10 @@ public static void arrayCreate() {
         // numeric: 0
         // boolean: false
         // class: null
+        // [] -- array access operator
+        // new keyword create arrays an initialize the array elements their default value
+        //or initializing with block int[] myNumber = {1,2,3};
+        // every array element is also a reference
     }
     for (int i = 0; i < loopArray.length; i++) {
         loopArray[i] = loopArray.length - 1; //[5, 4, 3, 2, 1,]
