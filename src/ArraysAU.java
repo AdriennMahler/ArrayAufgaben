@@ -47,7 +47,6 @@ public class ArraysAU {
             int k = rand.nextInt(max - min + 1) + min;
             a[i] = k;
         }
-        printArray(a);
         return a;
     }
 //-------------------------------------------------------------------------------------------------//
@@ -61,8 +60,6 @@ public class ArraysAU {
 
     public static void printArray(int[] arr) {
         String arrAsText = Arrays.toString(arr);
-        System.out.println(arrAsText);
-
     }
     //-------------------------------------------------------------------------------------------------//
     /*
@@ -104,15 +101,12 @@ public class ArraysAU {
 
         char result[]= sb.toString().toCharArray();
 
-        printArray(result);
-
         return result;
     }
 
 // char Array print Methode
     public static void printArray(char[] arr){
         String arrAsText = Arrays.toString(arr);
-        System.out.println(arrAsText);
     }
 //-------------------------------------------------------------------------------------------------//
     /*
@@ -122,9 +116,7 @@ public class ArraysAU {
      */
     public static void math() {
         double[] math = new double[]{Math.PI, Math.E};
-
         String arrAsText = Arrays.toString(math);
-        System.out.println(arrAsText);
     }
     //-------------------------------------------------------------------------------------------------//
      /*
@@ -151,7 +143,6 @@ public class ArraysAU {
         for(int i=0; i<a1.length; i++){
             a3[i]=a1[i]+a2[i];
         }
-        printArray(a3);
         return a3;
         }
 //-------------------------------------------------------------------------------------------------//
@@ -181,8 +172,6 @@ public class ArraysAU {
         System.arraycopy(a1, 0, b, 0, a1Length);
         System.arraycopy(a2, 0, b, a1Length, a2Length);
 
-        printArray(b);
         return b;
     }
-
 }
