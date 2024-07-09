@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Random;
-import java.util.ArrayList;
 
 /*
 Erstellen Sie eine Klasse 'IntMatrix',
@@ -39,10 +37,9 @@ m1.equals(m2);
 
 -----------------------------------------------------------------------
  */
-public class IntMatrix {
+    public class IntMatrix {
     int[][] m1;
-    int[][] m2;
-    int[][] m3;
+
 
     //--------------------------------------------------------------------------
     /*
@@ -50,19 +47,22 @@ public class IntMatrix {
     */
     public IntMatrix(int a, int b) {
         m1 = new int[a][b];
-
+        //--------------------------------------------------------------------------
     /*
     System.out.println(m1) gibt auf der Konsole die IntMatrix m1 in folgender Form aus:
         0, 0, 0
         0, 0, 0
      */
-        ArrayList<IntMatrix> m1= new ArrayList[a][b]<>();
-        for (int k = 0; k < a; k++) {
-            for (int l = 0; l < b; l++) {
 
-                System.out.print(m1);
 
+        for (int k = 0; k < m1.length; k++) {
+            for (int l = 0; l < m1[k].length; l++) {
+                System.out.print(m1[k][l]);
+                if(l<m1[k].length-1) {
+                    System.out.print(", ");
+                }
             }
+            System.out.println();
         }
     }
 
@@ -79,12 +79,11 @@ public class IntMatrix {
     Erstellt eine IntMatrix mit 5 Zeilen und 3 Spalten.
     Alle Elemente der IntMatrix sind mit dem Wert 100 initialisiert:
      */
-    public IntMatrix(int a, int b, int c) {
-        m2 = new int[a][b];
-        for (int i = 0; i < m2.length; i++) {
-            for (int j = 0; j < m2[i].length; j++) {
-                m2[i][j] = c;
-
+   public IntMatrix(int a, int b, int c) {
+        m1 = new int[a][b];
+        for (int i = 0; i < m1.length; i++) {
+            for (int j = 0; j < m1[i].length; j++) {
+               System.out.print( m1[i][j] = c);
             }
             System.out.println();
         }
@@ -97,27 +96,39 @@ public class IntMatrix {
 
      */
     public static IntMatrix getRandomMatrix(int a, int b, int c){
-        IntMatrix m3 = new IntMatrix(a,b);
+        IntMatrix m1 = new IntMatrix(a,b);
         int min = 0;
         Random random = new Random();
         for (int i = 0; i < a; i++) {
             for (int j = 0; j < b; j++) {
-                m3.m3[i][j] = random.nextInt(c - min + 1) + min;
+                m1.m1[i][j] = random.nextInt(c - min + 1) + min;
+                System.out.print( m1.m1[i][j] +" ");
+            }
+            System.out.println();
         }
+        return m1;
     }
-    return m3;
-    };
+    //--------------------------------------------------------------------------
+    /*
+    Liefert true, falls die Matrizen die gleichen Werte an den entsprechenden
+    Stellen gespeichert haben. Die Matrizen mit ungleichen Dimensionen sind ungleich:
 
+            m1.equals(m2);
+     */
+    public boolean equals(IntMatrix m2){
+
+        return true;
+    }
 
     //--------------------------------------------------------------------------
 
     public static void main(String[] args) {
-        IntMatrix m1 = new IntMatrix(2, 3);
-        IntMatrix m2 = new IntMatrix(5, 3, 100);
-        int i = m1.get(1, 2);
-        IntMatrix m3 = IntMatrix.getRandomMatrix(4, 6, 200);
-
-}
+       IntMatrix m1 = new IntMatrix(2, 3);
+        System.out.println( m1.get(1, 2));
+     IntMatrix m2 = new IntMatrix(5, 3, 100);
+       IntMatrix m3 = IntMatrix.getRandomMatrix(4, 6, 200);
+       System.out.println( m1.equals(m2));
+    }
 
 
 }
