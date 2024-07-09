@@ -115,8 +115,15 @@ m1.equals(m2);
 
             m1.equals(m2);
      */
-    public boolean equals(IntMatrix m2){
-
+    public boolean equals(int[][] m2){
+        if(m1.length !=m2.length)
+            return false;
+        for(int i=0; i<m1.length; i++){
+            for(int j=0; j<m1[i].length; j++){
+                if(m1[i][j] != m2[i][j])
+                    return false;
+            }
+        }
         return true;
     }
 
