@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.ArrayList;
 
 /*
 Erstellen Sie eine Klasse 'IntMatrix',
@@ -48,14 +50,20 @@ public class IntMatrix {
     */
     public IntMatrix(int a, int b) {
         m1 = new int[a][b];
-        for (int k = 0; k < m1.length; k++) {
-            for (int l = 0; l < m1[k].length; l++) {
-                System.out.print(m1[k][l] + ",");
+
+    /*
+    System.out.println(m1) gibt auf der Konsole die IntMatrix m1 in folgender Form aus:
+        0, 0, 0
+        0, 0, 0
+     */
+        ArrayList<IntMatrix> m1= new ArrayList[a][b]<>();
+        for (int k = 0; k < a; k++) {
+            for (int l = 0; l < b; l++) {
+
+                System.out.print(m1);
 
             }
-            System.out.println();
         }
-        System.out.println();
     }
 
     //--------------------------------------------------------------------------
