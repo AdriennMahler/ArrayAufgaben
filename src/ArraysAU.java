@@ -6,10 +6,10 @@ public class ArraysAU {
 
     public static void main(String[] args) {
 
-        int[] arr = createArray(2, 5, 30);  //A1
-        umlaute();                                           //A3
-        deutschBuchstaben();                                 //A4
-        math();                                              //A5
+       // int[] arr = createArray(2, 5, 30);  //A1
+       // umlaute();                                           //A3
+       // deutschBuchstaben();                                 //A4
+       // math();                                              //A5
 
         //-------Test A6-------------------------------------------//
       /*  int[] a1 = { 1, 2, 3 };
@@ -23,6 +23,7 @@ public class ArraysAU {
         int[] a2 = { 12, 13, 14 };
 
         int[] a3 = join(a1, a2); //000??
+
     }
 
      /*
@@ -166,12 +167,12 @@ public class ArraysAU {
     public static int[] join(int[] a1, int[] a2){
         int a1Length= a1.length;
         int a2Length= a2.length;
-        int bLength= a1Length*a2Length;
+        int bLength= a1Length+a2Length;
         int[] b= new int[bLength];
 
         System.arraycopy(a1, 0, b, 0, a1Length);
         System.arraycopy(a2, 0, b, a1Length, a2Length);
-
+        printArray(b);
         return b;
     }
 }
